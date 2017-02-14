@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<!--Made by Ethan Waterman and Samuel Knowles-->
+		<title>LED Controller</title>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+		<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="style.css">
+	</head>
+	<body>
+		<header>
+			<h1>Legendary LED Lightshow Controller</h1>
+		</header>
+		<div class="container-fluid main">
+			<div class="container-fluid">
+				<div class="well col-md-5">
+					<div class="container">
+						<h2>Custom Colour</h2>
+						<h4>A custom, solid colour</h4>
+						<br>
+						<form id="customColour">
+							<p>Colour <input id="custColValue" type="color" value="#ff0000"></input></p>
+							<br>
+							<button class="btn btn-success" id="custColSubmit" type="button" onclick="custCol()">Go!</button>
+						</form>
+					</div>
+				</div>
+				<div class="col-md-2"></div>
+				<div class="well col-md-5">
+					<div class="container">
+						<h2>Random Fade</h2>
+						<h4>Fades in and out with random colours</h4>
+						<br>
+						<form id="fade">
+							<p>Fade Interval <input id="fadeLength" type="number" value="1" min="1" max="60"></input></p>
+							<br>
+							<button class="btn btn-success" id="fadeSubmit" type="button" onclick="fade()">Go!</button>
+						</form>
+					</div>
+				</div>
+			</div>
+			<div class="container-fluid">
+				<div class="well col-md-5">
+					<div class="container">
+						<h2>Breathing</h2>
+						<h4>Fades in and out with a custom colour</h4>
+						<br>
+						<form id="breath">
+							<p>Colour <input id="breathCol" type="color" value="#ff0000"></input></p>
+							<p>Breathing Interval <input id="breathLength" type="number" value="1" min="1" max="60"></input></p>
+							<br>
+							<button class="btn btn-success" id="breathSubmit" type="button" onclick="breath()">Go!</button>
+						</form>
+					</div>
+				</div>
+				<div class="col-md-2"></div>
+				<div class="well col-md-5">
+					<div class="container">
+						<h2>Seizure</h2>
+						<h4>Flashes either a custom colour or randomly, like a 90s rave!</h4>
+						<br>
+						<form id="flash">
+							<p>Colour <input id="flashCol" type="color" value="#ff0000"></input></p>
+							<p>Flash Interval <input id="flashLength" type="number" value="1" min="1" max="60"></input></p>
+							<p><input id="flashRandomCol" type="checkbox" value="1"> Random Colour</input></p>
+							<br>
+							<button class="btn btn-success" id="flashSubmit" type="button" onclick="flash()">Go!</button>
+						</form>
+					</div>
+				</div>
+			</div>
+			<div class="container-fluid">
+				<div class="well col-md-5">
+					<div class="container">
+						<h2>Rainbow</h2>
+						<h4>Smoothly cycles across the colour spectrum</h4>
+						<br>
+						<form id="rainbow">
+							<button class="btn btn-success" id="rainbowSubmit" type="button" onclick="rainbow()">Go!</button>
+						</form>
+					</div>
+				</div>
+				<div class="col-md-2"></div>
+				<div class="well col-md-5">
+					<div class="container">
+						<h2>Stop!</h2>
+						<h4>Stops any ongoing effects</h4>
+						<br>
+						<form id="stop">
+							<button class="btn btn-danger" id="stop" type="button" onclick="stopLed()">Stop!!</button>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+	<script type="text/javascript" src="led.js"></script>
+</html>

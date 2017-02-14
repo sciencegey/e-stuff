@@ -1,0 +1,30 @@
+/*Made by Ethan Waterman and Samuel Knowles*/
+* {
+	margin: 0;
+	padding: 0;
+	font-family: 'Roboto', sans-serif;
+}
+
+header {
+	background-color: #990000;
+	right: 0;
+	left: 0;
+	box-shadow: 0px 7px 7px #262626;
+	text-align: center;
+	position: relative;
+	top: -20px;
+}
+
+header h1 {
+	padding: 20px;
+	color: #fff;
+	font-size: 4em;
+}
+
+.main{
+	width: 100%;
+}
+
+.well{
+	box-shadow: -3px 3px 3px #cccccc;
+}
